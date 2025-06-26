@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+houseful/node_modules
+houseful/.pnp
+houseful/.pnp.*
+houseful/.yarn/*
+!houseful/.yarn/patches
+!houseful/.yarn/plugins
+!houseful/.yarn/releases
+!houseful/.yarn/versions
+
+# testing
+houseful/coverage
+
+# next.js
+houseful/.next/
+houseful/out/
+
+# production
+houseful/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+houseful/.env*
+
+# vercel
+houseful/.vercel
+
+# typescript
+houseful/*.tsbuildinfo
+houseful/next-env.d.ts
