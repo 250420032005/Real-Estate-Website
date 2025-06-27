@@ -1,9 +1,9 @@
 "use client";
 
-import StoreProviders from "@/state/redux";
+import StoreProvider from "@/state/redux";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
-  return <StoreProviders>{children}</StoreProviders>;
+  return <StoreProvider>{children}</StoreProvider>;
 };
 
 export default Providers;
