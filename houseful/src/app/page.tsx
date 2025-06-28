@@ -1,7 +1,7 @@
-import React from "react";
+"use client";
 
-const Home = () => {
-  return <div>Home</div>;
-};
+import { useState, useEffect } from "react";
 
-export default Home;
+export default function ThemeTest() {
+  return <div>Hello</div>;
+}
