@@ -2,6 +2,7 @@
 
 # dependencies
 houseful/node_modules
+server/node_modules
 houseful/.pnp
 houseful/.pnp.*
 houseful/.yarn/*
@@ -32,6 +33,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 houseful/.env*
+server/.env*
 
 # vercel
 houseful/.vercel
@@ -39,3 +41,6 @@ houseful/.vercel
 # typescript
 houseful/*.tsbuildinfo
 houseful/next-env.d.ts
+
+#Prisma
+server/src/generated/prisma
