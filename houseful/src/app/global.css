@@ -3,7 +3,8 @@
 @theme {
   /* Default Theme */
 
-  /* Primary */
+  /* Primary Colors */
+  --color-primary-button: hsl(221.2 83.2% 53.3%);
   --color-primary-50: hsl(0 0% 99%);
   --color-primary-100: hsl(240 4% 95%);
   --color-primary-200: hsl(240 3% 88%);
@@ -16,7 +17,7 @@
   --color-primary-900: hsl(240 11% 2%);
   --color-primary-950: hsl(0 0% 0%);
 
-  /* Secondary */
+  /* Secondary Colors */
   --color-secondary-50: hsl(0 50% 99%);
   --color-secondary-100: hsl(0 73% 97%);
   --color-secondary-200: hsl(0 71% 93%);
@@ -28,12 +29,121 @@
   --color-secondary-800: hsl(0 72% 28%);
   --color-secondary-900: hsl(0 73% 15%);
   --color-secondary-950: hsl(0 73% 10%);
+
+  /* Neutral Colors */
+  --color-foreground: hsl(222.2 84% 4.9%);
+  --color-background: hsl(0 0% 100%);
+  --color-background-dark: hsl(222.2 84% 4.9%);
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-input: hsl(214.3 31.8% 91.4%);
+  --color-ring: hsl(221.2 83.2% 53.3%);
+  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-primary-foreground: hsl(210 40% 98%);
+
+  /* Authenticator */
+  --radius-authradius: 0.5rem;
+  --color-authborder: hsl(214.3 31.8% 91.4%);
 }
 
-/*  .light {
+/* Amplify UI Overrides */
+[data-amplify-authenticator] {
+  --amplify-components-button-primary-background-color: var(--color-primary-50);
+  --amplify-components-button-primary-hover-background-color: color-mix(
+    in srgb,
+    var(--color-primary-50) 90%,
+    transparent
+  );
+  --amplify-components-button-border-radius: var(--radius-authradius, 0.5rem);
+  --amplify-components-fieldcontrol-border-radius: var(
+    --radius-authradius,
+    0.5rem
+  );
+}
+
+[data-amplify-authenticator][data-variation="default"] {
+  height: 100%;
+  padding: 2rem !important;
+}
+
+[data-amplify-authenticator] [data-amplify-router] {
+  border: none !important;
+  box-shadow: none !important;
+  max-width: 400px !important;
+  margin: 0 auto;
+}
+
+[data-amplify-authenticator] [data-amplify-container] {
+  border-radius: var(--radius-authradius, 0.5rem);
+  padding: 2rem !important;
+  border: 1px solid var(--color-authborder, var(--color-border));
+}
+
+[data-amplify-authenticator] [data-amplify-form] {
+  padding: 0 !important;
+}
+
+[data-amplify-authenticator] .amplify-tabs__list {
+  display: none;
+}
+
+[data-amplify-authenticator] .amplify-button--primary {
+  width: 100%;
+  height: 2.75rem;
+  margin-top: 1rem;
+  background-color: var(--color-primary-button) !important;
+  color: var(--color-primary-foreground) !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+[data-amplify-authenticator] .amplify-button--primary:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary-button) 80%,
+    transparent
+  ) !important;
+}
+
+[data-amplify-authenticator] .amplify-field-group__control {
+  border-color: var(--color-input);
+}
+
+[data-amplify-authenticator] .amplify-field-group__control:focus-within {
+  border-color: var(--color-ring) !important;
+  box-shadow: 0 0 0 1px var(--color-ring) !important;
+}
+
+[data-amplify-authenticator] .amplify-field__show-password {
+  color: var(--color-muted-foreground);
+}
+
+[data-amplify-authenticator] .amplify-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+[data-amplify-authenticator] .amplify-select {
+  border-color: var(--color-input);
+  border-radius: var(--radius-authradius, 0.5rem);
+  height: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+[data-amplify-authenticator] .amplify-text--error {
+  color: #ff0000;
+}
+
+/* Sonner Toast Styles */
+[data-close-button="true"] {
   background-color: var(--color-background);
+  border-color: var(--color-border);
+  color: var(--color-foreground);
 }
 
-.dark {
-  background-color: var(--color-background-dark);
-} */
+[data-close-button="true"]:hover {
+  background-color: var(--color-secondary-100);
+}

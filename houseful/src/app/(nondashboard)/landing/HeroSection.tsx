@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { animate, motion } from "framer-motion";
+import { animate, color, motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -37,7 +37,8 @@ const HeroSection = () => {
               value="search query"
               onChange={() => {}}
               placeholder="Search by city, neighborhood or address"
-              className="w-full max-w-lg rounded-none rounded-l-xl bg-white h-12"
+              className="w-full max-w-lg bg-white rounded-none rounded-l-xl h-12"
+              style={{ backgroundColor: "white" }}
             ></Input>
             <Button
               onClick={() => {}}

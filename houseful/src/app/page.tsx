@@ -1,8 +1,13 @@
-"use client";
+import Navbar from "@/components/Navbar";
+import Landing from "./(nondashboard)/landing/page";
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
-
-export default function ThemeTest() {
-  return <Link href={"/landing"}>Click</Link>;
+export default function Home() {
+  return (
+    <div className="h-full w-full">
+      <Navbar />
+      <main className={`h-full flex w-full flex-col`}>
+        <Landing />
+      </main>
+    </div>
+  );
 }
